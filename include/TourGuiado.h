@@ -5,7 +5,7 @@
 #ifndef TOURGUIADO_H
 #define TOURGUIADO_H
 
-class TourGuiado {
+class TourGuiado: public Experiencia {
     private:
         std::string agencia;
         std::set<std::string> lugaresVisitados;
