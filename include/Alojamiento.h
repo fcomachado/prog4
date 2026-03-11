@@ -10,11 +10,10 @@ class Alojamiento: public Experiencia{
         TipoRegimen regimen;
         int cantNoches;
     public:
-        calcularCosto();
+        float calcularCosto();
 
         TipoRegimen getTipoRegimen();
         int getcantNoches();
-        int getprecioBase();
 };
 
 #endif
