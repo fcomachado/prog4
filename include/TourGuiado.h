@@ -4,21 +4,22 @@
 #include <sstream>
 #ifndef TOURGUIADO_H
 #define TOURGUIADO_H
+using namespace std;
 
 class TourGuiado: public Experiencia {
     private:
-        std::string agencia;
-        std::set<std::string> lugaresVisitados;
+        string agencia;
+        set<string> lugaresVisitados;
     public:
-        TourGuiado();
-        TourGuiado(std::string, std::set<std::string>),
+        TourGuiado(){};
+        TourGuiado(string, set<string>),
 
-        std::string getAgencia();
-        std::set<std::string> getLugaresVisitados();
+        string getAgencia();
+        set<string> getLugaresVisitados();
         
         //¿podria querer modificar la empresa responsable y el itinerario de lugares a visitar?
-        void setAgencia(std::string);
-        void setLugaresVisitados(std::set<std::string>);
+        void setAgencia(string);
+        void setLugaresVisitados(set<string>);
 
         virtual float calcularCosto();
         ~TourGuiado();
