@@ -20,7 +20,7 @@ class TourGuiado: public Experiencia {
         void setAgencia(std::string);
         void setLugaresVisitados(std::set<std::string>);
 
-        float calcularCosto();
+        virtual float calcularCosto();
         ~TourGuiado();
 }
 
