@@ -23,6 +23,7 @@ class Experiencia {
         DTFecha getFecha();
 
         DTExpe getDT();
+        set<string> getTuristas();
         float calcularCosto();
        
         ~Experiencia();

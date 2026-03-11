@@ -26,7 +26,7 @@ void TourGuiado::setAgencia(string agenc){
 }
 
 void TourGuiado::setLugaresVisitados(set<string> lugaresVisitad){
-    lugaresVisitados = lugresVisitad;
+    lugaresVisitados = lugaresVisitad;
 }
 
 float TourGuiado::calcularCosto(){

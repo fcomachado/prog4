@@ -12,7 +12,7 @@ class TourGuiado: public Experiencia {
         set<string> lugaresVisitados;
     public:
         TourGuiado(){};
-        TourGuiado(string, set<string>),
+        TourGuiado(string, set<string>);
 
         string getAgencia();
         set<string> getLugaresVisitados();
@@ -23,6 +23,6 @@ class TourGuiado: public Experiencia {
 
         virtual float calcularCosto();
         ~TourGuiado();
-}
+};
 
 #endif 
