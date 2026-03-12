@@ -7,7 +7,17 @@ DTExpe::DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha
     this->turistas = turistas;
 }
 
-string getCodigoReserva();
-string getDescripcion();
-DTFecha getFecha();
-std::list<Turista*> getTuristas();
+std::string DTExpe::getCodigoReserva() {
+    return this->codigoReserva;
+}
+std::string DTExpe::getDescripcion() {
+    return this->descripcion;
+}
+
+DTFecha DTExpe::getFecha() {
+    return this->fecha;
+}
+
+std::list<Turista*> DTExpe::getTuristas() {
+    return this->turistas;
+}
