@@ -35,7 +35,7 @@ class Experiencia {
 
         DTExpe getDT();
         set<string> getTuristas();
-        float calcularCosto();
+        virtual float calcularCosto() = 0;
        
         ~Experiencia();
 }

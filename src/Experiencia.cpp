@@ -61,7 +61,7 @@ DTExpe Experiencia::getDT() {
     std::string descripcion = this->getDescripcion();
     DTFecha fecha = this->getFecha();
     Turista* turistas = this->getTuristas();
-    DTExpe res = DTExpe(codigoReserva, descripcion, fecha, turistas);
+    DTExpe *res = new DTExpe(codigoReserva, descripcion, fecha, turistas);
     return res;
 }*/
 
@@ -69,9 +69,9 @@ set<string> Experiencia::getTuristas() {
 
 }
 
-float Experiencia::calcularCosto() {
+/*float Experiencia::calcularCosto() {
 
-}
+}*/ //no tiene implementacion aca
        
 Experiencia::~Experiencia() {
 

@@ -6,9 +6,9 @@
 
 class DTFecha {
     private:
-        int Dia;
-        int Mes;
-        int Anio;
+        int dia;
+        int mes;
+        int anio;
     
     public:
 
