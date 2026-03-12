@@ -53,7 +53,7 @@ DTExpe Experiencia::getDT() {
     std::string codigoReserva = this->getCodigoReserva();
     std::string descripcion = this->getDescripcion();
     DTFecha fecha = this->getFecha();
-    std::set<Turista*> turistas = this->getTuristas();
+    std::set<Turista*> turistas = this->getTuristas(); // esta bien?
     DTExpe* res = new DTExpe(codigoReserva, descripcion, fecha, turistas); 
     return res; 
 }
