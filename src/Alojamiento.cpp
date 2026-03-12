@@ -2,23 +2,23 @@
 #include <string>
 #include <sstream>
 #include <Experiencia.h>
+#include <Alojamiento.h>
 
-class Alojamiento: public Experiencia{
-  private:
-    std::string hotel;
-    TipoRegimen regimen;
-    int cantNoches;
-  public:
-    float calcularCosto(){
-      if (TipoRegimen == AllInculsive){
-        calcularCosto = (precioBase + 10)*cantNoches;
-      } else{ 
-        calcularCosto = precioBase*cantNoches;
-      };
-    TipoRegimen getTipoRegimen(){
-      return regimen;
-    };
-    int getcantNoches(){
-      return cantNoches;
-    };
-};
+
+
+float Alojamiento::calcularCosto(){
+  if (TipoRegimen == AllInculsive){
+    calcularCosto = (precioBase + 10)*cantNoches;
+  } else{ 
+    calcularCosto = precioBase*cantNoches;
+  }
+}
+
+TipoRegimen Alojamiento::getTipoRegimen(){
+  return this->regimen;
+}
+
+int Alojamiento::getcantNoches(){
+  return this->cantNoches;
+}
+
