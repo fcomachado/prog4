@@ -1,21 +1,24 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <list>
 #include "DTFecha.h"
 #ifndef DTEXPE_H
 #define DTEXPE_H
 
+class Turista;
+
 class DTExpe {
     private:
-        string codigoReserva;
-        string descripcion;
+        std::string codigoReserva;
+        std::string descripcion;
         DTFecha fecha;
-        set<string> turistas;
+        std::list<Turista*> turistas; //lista de punteros a turista
     
     public:
 
         DTExpe();
-        DTExpe(string codigoReserva, string descripcion, DTFecha fecha, set<string> turistas);
+        DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, Turista* turistas);
 
         string getCodigoReserva();
         string getDescripcion();
