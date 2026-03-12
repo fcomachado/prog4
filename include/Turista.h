@@ -18,11 +18,9 @@ class Turista {
         Turista();
         Turista(std::string, std::string, std::string);
 
-        void setCodigoReserva(std::string);
-        void setDescripcion(std::string);
-        void setPrecioBase(int);
-        void setFecha(DTFecha);
-        void setTuristas(Turista*);
+        void setCi(std::string);
+        void setNombre(std::string);
+        void setEmail(std::string);
 
         std::string getCi();
         std::string getNombre();
