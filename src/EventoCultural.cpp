@@ -27,7 +27,18 @@ void EventoCultural::setUsoCupon(bool usoCupon) {
 }
 
 float EventoCultural::calcularCosto() {
-    return 0;
+    float precioBase = getPrecioBase();
+    set<string> conjuntoTuristas = getTuristas();
+    int cantidadTuristas = conjuntoTuristas.size();
+
+    float resultado = 0;
+    if (getUsoCupon()) {
+        resultado = (precioBase * cantidadTuristas) - (5 * cantidadTuristas);
+    } else {
+        resultado = (precioBase * cantidadTuristas);
+    }
+
+    return resultado;
 }
 
 EventoCultural::~EventoCultural() {
