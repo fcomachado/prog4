@@ -48,25 +48,19 @@ DTFecha Experiencia::getFecha() {
     return this->fecha;
 }
 
-/*Turista* getTuristas() {
-    return this->turistas;
-}*/
 
 DTExpe Experiencia::getDT() { 
-
-}
-
-/*DTExpe Experiencia::getDT() {
     std::string codigoReserva = this->getCodigoReserva();
     std::string descripcion = this->getDescripcion();
     DTFecha fecha = this->getFecha();
-    Turista* turistas = this->getTuristas();
-    DTExpe *res = new DTExpe(codigoReserva, descripcion, fecha, turistas);
-    return res;
-}*/
+    std::set<Turista*> turistas = this->getTuristas();
+    DTExpe* res = new DTExpe(codigoReserva, descripcion, fecha, turistas); 
+    return res; 
+}
 
-set<string> Experiencia::getTuristas() {
 
+std::set<Truista*> Experiencia::getTuristas() {
+    return this->turistas;
 }
 
 /*float Experiencia::calcularCosto() {

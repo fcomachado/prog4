@@ -13,7 +13,7 @@ class DTExpe {
         std::string codigoReserva;
         std::string descripcion;
         DTFecha fecha;
-        std::list<Turista*> turistas; //lista de punteros a turista
+        std::set<Turista*> turistas; //lista de punteros a turista
     
     public:
 
@@ -23,7 +23,7 @@ class DTExpe {
         string getCodigoReserva();
         string getDescripcion();
         DTFecha getFecha();
-        set<string> getTuristas();
+        std::set<Turista*> getTuristas();
 };
 
 #endif
