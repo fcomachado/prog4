@@ -2,7 +2,13 @@
 #include <iostream>
 #include <list>
 #include <map>
+*/
+#include <Turista.h>
+#include <string>
+#include <set>
+using namespace std;
 
+/*
 std::list<Experiencia*> experiencias;
 std::map<std::string, Experiencia*> map_experiencias;
 
@@ -14,17 +20,18 @@ void coleccion_guardarExperiencia(Experiencia* exp){
 	std::pair<std::string, Experiencia*> entry(exp->getCodigoReserva(), exp);
     map_experiencias.insert(entry);
 }
+*/
 void coleccion_eliminarExperiencia(Experiencia* exp){
 	experiencias.remove(exp);
 	map_experiencias.erase(exp->getCodigoReserva());
 }
-
+/*
 void coleccion_guardarTurista(Turista* tur){
 	turistas.push_back(tur);
 	std::pair<std::string, Turista*> entry(tur->getCi(), tur);
     map_turistas.insert(entry);
 }
-
+*/
 Turista* coleccion_getTurista(std::string ci){
 	return map_turistas[ci];
 }
@@ -32,6 +39,7 @@ Turista* coleccion_getTurista(std::string ci){
 Experiencia* coleccion_getExperiencia(std::string codigoReserva){
 	return map_experiencias[codigoReserva];
 }
+/*
 
 void parte_a(){
 }
@@ -53,16 +61,32 @@ void parte_f(){
 
 void parte_g(){
 }
+*/
 
 void parte_h(){
+	Turista* turista = coleccion_getTurista(4.951.278-9);
+	set<string> listaExperiencias = (*turista).listarExperiencias(10/12/2023, 0, 1000);
+	//imprimo recorriendo el set
+	for(set<string>::iteretor it = listaExperiencias.begin(), it != listaExperiencias.end(), it++){
+		cout << *it << endl;
+	}
 }
 
 void parte_i(){
+	Experiencia* aBorrar = coleccion_getExperiencia(TGR3257);
+	coleccion_eliminarExperiencia(aBorrar);
 }
 
 void parte_j(){
+	Turista* turista = coleccion_getTurista(1.535.442-0);
+	set<string> listaExperiencias = (*turista).listarExperiencias(10/10/2020, 0, 1000);
+	//imprimo recorriendo el set
+	for(set<string>::iteretor it = listaExperiencias.begin(), it != listaExperiencias.end(), it++){
+		cout << *it << endl;
+	}
 }
 
+/*
 void parte_k(){
 }
 
