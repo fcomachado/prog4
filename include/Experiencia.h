@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <set>
+#include <list>
 #include <DTFecha.h>
 #include <DTExpe.h>
 #ifndef EXPERIENCIA_H
@@ -15,7 +15,7 @@ class Experiencia {
        std::string descripcion;
        int precioBase;
        DTFecha fecha;
-       std::set<Turista*> turistas; //lista de punteros a turista
+       std::list<Turista*> turistas; //lista de punteros a turista
 
     public:
         Experiencia();
@@ -34,7 +34,7 @@ class Experiencia {
         //Turista* getTuristas();
 
         DTExpe getDT();
-        std::set<Truista*> getTuristas();
+        std::list<Truista*> getTuristas();
         virtual float calcularCosto() = 0;
        
         ~Experiencia();
