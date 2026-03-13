@@ -21,3 +21,7 @@ DTFecha DTExpe::getFecha() {
 std::list<Turista*> DTExpe::getTuristas() {
     return this->turistas;
 }
+
+std::ostream Experiencia::operator<<(DTExpe dtexpe) {
+    
+}

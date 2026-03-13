@@ -24,6 +24,8 @@ class DTExpe {
         string getDescripcion();
         DTFecha getFecha();
         std::list<Turista*> getTuristas();
+
+        std::ostream operator<<(DTExpe);
 };
 
 #endif
