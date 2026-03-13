@@ -1,4 +1,5 @@
 #include "EventoCultural.h"
+#include "Experiencia.h"
 
 EventoCultural::EventoCultural() {
     ubicacion = "";
