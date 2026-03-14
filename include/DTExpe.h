@@ -1,4 +1,5 @@
 #include <iostream>
+//#include <ostream>
 #include <sstream>
 #include <string>
 #include <list>
@@ -13,19 +14,20 @@ class DTExpe {
         std::string codigoReserva;
         std::string descripcion;
         DTFecha fecha;
-        std::list<Turista*> turistas; //lista de punteros a turista
+        std::list<std::string> turistas; //lista de nombres de los turistas
+        //std::list<Turista*> turistas; //idea original
     
     public:
 
         DTExpe();
-        DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, Turista* turistas);
+        DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, std::list<std::string> turistas);
 
         string getCodigoReserva();
         string getDescripcion();
         DTFecha getFecha();
         std::list<Turista*> getTuristas();
 
-        std::ostream operator<<(DTExpe);
+        std::ostream &operator<<(std::ostream &,DTExpe);
 };
 
 #endif
