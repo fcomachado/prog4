@@ -1,11 +1,11 @@
 /*
-#include <iostream>
 #include <list>
 #include <map>
 */
 #include <Turista.h>
 #include <string>
 #include <set>
+#include <iostream>
 using namespace std;
 
 /*
@@ -60,24 +60,31 @@ void parte_c(){
 	EventoCultural::EventoCultural1("Teatro Solis", true);
 	EventoCultural1::Experiencia5("ECP1346", "Danza en el Solis", 10);
 }
-/*
+
 void parte_d(){
+	cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
+	cout << coleccion_getExperiencia("ALJ4789")->getDT() << endl;
+	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
+	cout << coleccion_getExperiencia("TGR3257")->getDT() << endl;
+	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;
 }
-*/
+
 void parte_e(){
 	Turista::Turista1("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
 	Turista::Turista2("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
 }
-/*
-void parte_f(){
-}
 
+void parte_f(){
+	cout << coleccion_getTurista("4.951.278-9")->toString() << endl;
+	cout << coleccion_getTurista("1.535.442-0")->toString() << endl;
+}
+/* 
 void parte_g(){
 }
 */
 
 void parte_h(){
-	Turista* turista = coleccion_getTurista(4.951.278-9);
+	Turista* turista = coleccion_getTurista("4.951.278-9");
 	set<string> listaExperiencias = (*turista).listarExperiencias(10/12/2023, 0, 1000);
 	//imprimo recorriendo el set
 	for(set<string>::iteretor it = listaExperiencias.begin(), it != listaExperiencias.end(), it++){
@@ -86,12 +93,12 @@ void parte_h(){
 }
 
 void parte_i(){
-	Experiencia* aBorrar = coleccion_getExperiencia(TGR3257);
+	Experiencia* aBorrar = coleccion_getExperiencia("TGR3257");
 	coleccion_eliminarExperiencia(aBorrar);
 }
 
 void parte_j(){
-	Turista* turista = coleccion_getTurista(1.535.442-0);
+	Turista* turista = coleccion_getTurista("1.535.442-0");
 	set<string> listaExperiencias = (*turista).listarExperiencias(10/10/2020, 0, 1000);
 	//imprimo recorriendo el set
 	for(set<string>::iteretor it = listaExperiencias.begin(), it != listaExperiencias.end(), it++){
@@ -99,10 +106,13 @@ void parte_j(){
 	}
 }
 
-/*
 void parte_k(){
+	cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
+	cout << coleccion_getExperiencia("ALJ4789")->getDT() << endl;
+	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
+	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;
 }
-
+/* 
 void cleanUp(){
 }
 
