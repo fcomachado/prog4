@@ -39,23 +39,36 @@ Turista* coleccion_getTurista(std::string ci){
 Experiencia* coleccion_getExperiencia(std::string codigoReserva){
 	return map_experiencias[codigoReserva];
 }
-/*
+
 
 void parte_a(){
+	Alojamiento::Alojamiento1("Hotel Lindorf", AllInculsive, 5);
+	Alojamiento1::Experiencia1("ALX5489", "Hotel moderno", 30, 18/05/2020);
+	Alojamiento::Alojamiento2("Hotel SeaView", MediaPension, 15);
+	Alojamiento2::Experiencia2("ALJ4789", "Todas las habitacions con vista al mar", 100, 10/02/2025);
+
 }
 
 void parte_b(){
+	TourGuiado::TourGuiado1("Paseos SA", "Plaza Independencia, Plaza Matriz");
+	TourGuiado1::Experiencia3("TGO4657", "Plazas de Montevideo", 10);
+	TourGuiado::TourGuiado2("Recorre", "Puerta de la Ciudadela, Mausoleo, Cabildo, Palacio Salvo");
+	TourGuiado2::Experiencia4("TGR3257", "Puntos Emblematicos", 5);
 }
 
 void parte_c(){
+	EventoCultural::EventoCultural1("Teatro Solis", true);
+	EventoCultural1::Experiencia5("ECP1346", "Danza en el Solis", 10);
 }
-
+/*
 void parte_d(){
 }
-
+*/
 void parte_e(){
+	Turista::Turista1("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
+	Turista::Turista2("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
 }
-
+/*
 void parte_f(){
 }
 
