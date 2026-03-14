@@ -31,7 +31,7 @@ class Turista {
         std::list<Experiencia*> getExperiencias();
 
         std::string toString();
-        set<string> listarExperiencias(DTFecha desde, float min, float max);
+        set<string> listarExperiencias(DTFecha, float, float);
        
         ~Turista();
 };

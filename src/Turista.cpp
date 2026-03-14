@@ -49,7 +49,7 @@ set<string> Turista::listarExperiencias(DTFecha desde, float min, float max){
         iter++;
     }
     return conjCR;
-}
+}// ||||||  FALTA compararFechas Y calcularCosto  ||||||
 
 Turista::~Turista() {
 
