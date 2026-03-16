@@ -8,6 +8,8 @@
 #include <set>
 using namespace std;
 
+
+void linkTuristaExperiencia(std::string, std::string); //función auxiliar punto-G
 /*
 std::list<Experiencia*> experiencias;
 std::map<std::string, Experiencia*> map_experiencias;
@@ -71,10 +73,22 @@ void parte_e(){
 /*
 void parte_f(){
 }
-
-void parte_g(){
-}
 */
+//función auxiliar para parte-G
+void linkTuristaExperiencia(std::string _turista, std::string _exp) {
+	Experiencia* exp = coleccion_getExperiencia(_exp);
+	Turista* turista = coleccion_getTurista(_turista);
+	turista->agregarExperiencia(exp);
+	exp->setTurista(turista);
+}
+void parte_g(){
+	linkTuristaExperiencia("4.951.278-9", "ALX5489");
+	linkTuristaExperiencia("4.951.278-9", "ALJ4789");
+	linkTuristaExperiencia("4.951.278-9", "TGR3257");
+	linkTuristaExperiencia("4.951.278-9", "ECP1346");
+	linkTuristaExperiencia("1.535.442-0", "TGO4657");
+	linkTuristaExperiencia("1.535.442-0", "TGR3257");
+}
 
 void parte_h(){
 	Turista* turista = coleccion_getTurista(4.951.278-9);
