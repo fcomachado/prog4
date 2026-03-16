@@ -19,6 +19,7 @@ class DTFecha {
         int getDia();
         int getMes();
         int getAnio();
-}
+        bool compararFechas(DTFecha, DTFecha); //devuelve true si fecha1 es posterior a fecha2
+};
 
 #endif
