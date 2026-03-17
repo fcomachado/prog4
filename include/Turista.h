@@ -1,13 +1,17 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <DTFecha.h>
-#include <Experiencia.h>
 #include <set>
+
 #ifndef TURISTA_H
 #define TURISTA_H
 
+#include "DTFecha.h"
+#include "Experiencia.h"
+
 using namespace std;
+
+class Experiencia;
 
 class Turista {
     private:

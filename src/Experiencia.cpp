@@ -24,9 +24,10 @@ void Experiencia::setPrecioBase(int precioBase) {
     this->precioBase = precioBase;
 }
 
-void Experiencia::setFecha(DTFecha fecha) {
+void Experiencia::setFecha(int dia, int mes, int anio) {
+    DTFecha* fecha = new DTFecha(dia, mes, anio);
     this->fecha = fecha;
-}
+} //aca estamos usando memoria, hay que liberarla
 
 void Experiencia::setTuristas(Turista* turista) {
     this->turistas = turista;

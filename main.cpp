@@ -1,16 +1,22 @@
-/*
 #include <list>
 #include <map>
-*/
-#include <Turista.h>
 #include <string>
 #include <set>
 #include <iostream>
+
+#include "include/Experiencia.h"
+#include "include/Alojamiento.h"
+#include "include/TourGuiado.h"
+#include "include/EventoCultural.h"
+
+
+//#include <../include/Turista.h>
+
 using namespace std;
 
 
 void linkTuristaExperiencia(std::string, std::string); //función auxiliar punto-G
-/*
+
 std::list<Experiencia*> experiencias;
 std::map<std::string, Experiencia*> map_experiencias;
 
@@ -22,18 +28,18 @@ void coleccion_guardarExperiencia(Experiencia* exp){
 	std::pair<std::string, Experiencia*> entry(exp->getCodigoReserva(), exp);
     map_experiencias.insert(entry);
 }
-*/
+
 void coleccion_eliminarExperiencia(Experiencia* exp){
 	experiencias.remove(exp);
 	map_experiencias.erase(exp->getCodigoReserva());
 }
-/*
+
 void coleccion_guardarTurista(Turista* tur){
 	turistas.push_back(tur);
 	std::pair<std::string, Turista*> entry(tur->getCi(), tur);
     map_turistas.insert(entry);
 }
-*/
+
 Turista* coleccion_getTurista(std::string ci){
 	return map_turistas[ci];
 }
@@ -44,23 +50,47 @@ Experiencia* coleccion_getExperiencia(std::string codigoReserva){
 
 
 void parte_a(){
-	Alojamiento::Alojamiento1("Hotel Lindorf", AllInculsive, 5);
-	Alojamiento1::Experiencia1("ALX5489", "Hotel moderno", 30, 18/05/2020);
-	Alojamiento::Alojamiento2("Hotel SeaView", MediaPension, 15);
-	Alojamiento2::Experiencia2("ALJ4789", "Todas las habitacions con vista al mar", 100, 10/02/2025);
+	Alojamiento* alojamiento1 = new Alojamiento("Hotel Lindorf", AllInclusive, 5);
+	alojamiento1->setCodigoReserva("ALX5489");
+	alojamiento1->setDescripcion("Hotel moderno");
+	alojamiento1->setPrecioBase(30);
+	alojamiento1->setFecha(18,05,2020);
 
+	Alojamiento* alojamiento2 = new Alojamiento("Hotel SeaView", MediaPension, 15);
+	alojamiento2->setCodigoReserva("ALJ4789");
+	alojamiento2->setDescripcion("Todas las habitacions con vista al mar");
+	alojamiento2->setPrecioBase(100);
+	alojamiento2->setFecha(10,02,2025);
 }
 
 void parte_b(){
-	TourGuiado::TourGuiado1("Paseos SA", "Plaza Independencia, Plaza Matriz");
-	TourGuiado1::Experiencia3("TGO4657", "Plazas de Montevideo", 10);
-	TourGuiado::TourGuiado2("Recorre", "Puerta de la Ciudadela, Mausoleo, Cabildo, Palacio Salvo");
-	TourGuiado2::Experiencia4("TGR3257", "Puntos Emblematicos", 5);
+	set<string> lugaresVisitados1;
+	lugaresVisitados1.insert("Plaza Independencia");
+	lugaresVisitados1.insert("Plaza Matriz");
+	TourGuiado* tourGuiado1 = new TourGuiado("Paseos SA", lugaresVisitados1);
+	tourGuiado1->setCodigoReserva("TGO4657");
+	tourGuiado1->setDescripcion("Plazas de Montevideo");
+	tourGuiado1->setPrecioBase(10);
+	tourGuiado1->setFecha(29,8,2024);
+
+	set<string> lugaresVisitados2;
+	lugaresVisitados2.insert("Puerta de la Ciudadela");
+	lugaresVisitados2.insert("Mausoleo");
+	lugaresVisitados2.insert("Cabildo");
+	lugaresVisitados2.insert("Palacio Salvo");
+	TourGuiado* tourGuiado2 = new TourGuiado("Recorre", lugaresVisitados2);
+	tourGuiado2->setCodigoReserva("TGR3257");
+	tourGuiado2->setDescripcion("Puntos Emblematicos");
+	tourGuiado2->setPrecioBase(5);
+	tourGuiado2->setFecha(29,8,2024);
 }
 
 void parte_c(){
-	EventoCultural::EventoCultural1("Teatro Solis", true);
-	EventoCultural1::Experiencia5("ECP1346", "Danza en el Solis", 10);
+	EventoCultural* eventoCultural1 = new EventoCultural("Teatro Solis", true);
+	eventoCultural1->setCodigoReserva("ECP1346");
+	eventoCultural1->setDescripcion("Danza en el Solis");
+	eventoCultural1->setPrecioBase(10);
+	eventoCultural1->setFecha(29,10,2025);
 }
 
 void parte_d(){
@@ -72,8 +102,8 @@ void parte_d(){
 }
 
 void parte_e(){
-	Turista::Turista1("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
-	Turista::Turista2("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
+	Turista::Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
+	Turista::Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
 }
 
 void parte_f(){
@@ -126,7 +156,7 @@ void parte_k(){
 	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
 	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;
 }
-/* 
+
 void cleanUp(){
 }
 
@@ -159,4 +189,3 @@ int main() {
 
 	return 0;
 }
-*/

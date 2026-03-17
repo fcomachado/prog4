@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <TipoRegimen.h>
+
 #ifndef ALOJAMIENTO_H
 #define ALOJAMIENTO_H
+
+#include "TipoRegimen.h"
+
 
 class Alojamiento: public Experiencia {
     private:

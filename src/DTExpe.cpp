@@ -22,7 +22,7 @@ std::list<std::string> DTExpe::getTuristas() {
     return this->turistas;
 }
 
-std::ostream Experiencia::&operator<<(std::ostream &0 ,DTExpe dtexpe) {
+std::ostream DTExpe::&operator<<(std::ostream &o ,DTExpe dtexpe) {
     std::string codigoReserva = dtexpe.getCodigoReserva();
     std::string descripcion = dtexpe.getDescripcion();
     DTFecha fechaSinFormato = dtexpe.getFecha();

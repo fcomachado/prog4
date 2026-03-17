@@ -22,12 +22,12 @@ class DTExpe {
         DTExpe();
         DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, std::list<std::string> turistas);
 
-        string getCodigoReserva();
-        string getDescripcion();
+        std::string getCodigoReserva();
+        std::string getDescripcion();
         DTFecha getFecha();
         std::list<Turista*> getTuristas();
 
-        std::ostream &operator<<(std::ostream &,DTExpe);
+        friend std::ostream &operator<<(std::ostream &,DTExpe);
 };
 
 #endif

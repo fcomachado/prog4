@@ -2,10 +2,13 @@
 #include <string>
 #include <sstream>
 #include <list>
-#include <DTFecha.h>
-#include <DTExpe.h>
+
 #ifndef EXPERIENCIA_H
 #define EXPERIENCIA_H
+
+#include "DTFecha.h"
+#include "DTExpe.h"
+#include "Turista.h"
 
 class Turista;
 
@@ -24,7 +27,7 @@ class Experiencia {
         void setCodigoReserva(std::string);
         void setDescripcion(std::string);
         void setPrecioBase(int);
-        void setFecha(DTFecha);
+        void setFecha(int, int, int);
         void setTuristas(Turista*);
 
         std::string getCodigoReserva();
@@ -34,10 +37,10 @@ class Experiencia {
         //Turista* getTuristas();
 
         DTExpe getDT();
-        std::list<Truista*> getTuristas();
+        std::list<Turista*> getTuristas();
         virtual float calcularCosto() = 0;
        
         ~Experiencia();
-}
+};
 
 #endif
