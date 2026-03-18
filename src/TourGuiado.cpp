@@ -31,7 +31,7 @@ void TourGuiado::setLugaresVisitados(set<string> lugaresVisitad){
 
 float TourGuiado::calcularCosto(){
     int precBase = getPrecioBase();
-    set<string> conjuntoTuristas = getTuristas();
+    std::list<Turista*> conjuntoTuristas = getTuristas();
     int cantidadTuristas = conjuntoTuristas.size();
     int cantLugaresVisitados = lugaresVisitados.size();
     

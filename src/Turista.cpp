@@ -2,6 +2,7 @@
 #include <string>
 #include <sstream>
 #include <Turista.h>
+#include <DTFecha.h>
 
 Turista::Turista() {}
 
@@ -40,16 +41,17 @@ set<string> Turista::listarExperiencias(DTFecha desde, float min, float max){
     while (iter != listaExps.end()) {
         Experiencia* exp = *iter;
 
-        DTFecha fecha = exp->getFecha();
+        //DTFecha fecha = exp->getFecha();
+        DTFecha fecha(exp->getFecha().getDia(), exp->getFecha().getMes(), exp->getFecha().getAnio());
         float costo = exp->calcularCosto();
-        if (compararFechas(fecha, desde) && costo >= min && costo <= max) {
+        if (fecha.compararFechas(fecha, desde) && costo >= min && costo <= max) {
             conjCR.insert(exp->getCodigoReserva());
         }
 
         iter++;
     }
     return conjCR;
-}// ||||||  FALTA compararFechas Y calcularCosto  ||||||
+}
 
 Turista::~Turista() {
 

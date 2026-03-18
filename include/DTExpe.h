@@ -18,7 +18,6 @@ class DTExpe {
         std::list<Turista*> turistas; //idea original
     
     public:
-
         DTExpe();
         DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, std::list<Turista*> turistas);
 

@@ -1,4 +1,4 @@
-IDIR = ../include
+IDIR = include
 CC = g++
 CFLAGS = -std=c++98 -Wall -Wextra -I$(IDIR)
 
@@ -20,6 +20,7 @@ $(ODIR):
 
 programa: |$(ODIR) $(ODIR)/main.o $(OS)
 	$(CC) -o programa $(ODIR)/main.o $(OS) $(CFLAGS)
+	
 
 $(ODIR)/main.o: main.cpp
 	$(CC) $(CFLAGS) -c main.cpp -o $(ODIR)/main.o

@@ -28,13 +28,12 @@ class Experiencia {
         void setDescripcion(std::string);
         void setPrecioBase(int);
         void setFecha(int, int, int);
-        void setTuristas(Turista*);
+        void setTuristas(std::list<Turista*>);
 
         std::string getCodigoReserva();
         std::string getDescripcion();
         int getPrecioBase();
         DTFecha getFecha();
-        //Turista* getTuristas();
 
         DTExpe getDT();
         std::list<Turista*> getTuristas();

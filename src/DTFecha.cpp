@@ -3,7 +3,11 @@
 #include <sstream>
 #include <DTFecha.h>
 
-DTFecha::DTFecha() {}
+DTFecha::DTFecha() {
+    this->dia = 0;
+    this->mes = 0;
+    this->anio = 0;
+}
 
 DTFecha::DTFecha(int dia, int mes, int anio) {
     this->dia = dia;
@@ -11,7 +15,7 @@ DTFecha::DTFecha(int dia, int mes, int anio) {
     this->anio = anio;
 }
 
-DTFecha::DTFecha(&DTFecha fecha) {
+DTFecha::DTFecha(DTFecha &fecha) {
     this->dia = fecha.getDia();
     this->mes = fecha.getMes();
     this->anio = fecha.getAnio();
@@ -26,10 +30,10 @@ int DTFecha::getMes() {
 }
 
 int DTFecha::getAnio() {
-    return this->anio
+    return this->anio;
 }
 //devuelve true si fecha1 es posterior a fecha2
-bool compararFechas(DTFecha fecha1, DTFecha fecha2){
+bool DTFecha::compararFechas(DTFecha fecha1, DTFecha fecha2){
     if (fecha1.getAnio() > fecha2.getAnio())
         return true;
     if (fecha1.getAnio() < fecha2.getAnio())

@@ -13,11 +13,13 @@ Alojamiento::Alojamiento(std::string hotel, TipoRegimen regimen, int cantNoches)
 }
 
 float Alojamiento::calcularCosto(){
-  if (TipoRegimen == AllInculsive){
-    calcularCosto = (precioBase + 10)*cantNoches;
+  float calcularCosto = 0;
+  if (this->regimen == AllInclusive){
+    calcularCosto = (this->getPrecioBase() + 10)*this->cantNoches;
   } else{ 
-    calcularCosto = precioBase*cantNoches;
+    calcularCosto = (this->getPrecioBase())*this->cantNoches;
   }
+  return calcularCosto;
 };
 
 TipoRegimen Alojamiento::getTipoRegimen(){
@@ -28,15 +30,15 @@ int Alojamiento::getcantNoches(){
   return this->cantNoches;
 };
 
-void setHotel(std::string hotel){
+void Alojamiento::setHotel(std::string hotel){
   this->hotel = hotel;
 };
 
-void setRegimen(TipoRegimen regimen){
+void Alojamiento::setRegimen(TipoRegimen regimen){
   this->regimen = regimen;
 };
 
-void setCantNoches(int cantNoches){
+void Alojamiento::setCantNoches(int cantNoches){
   this->cantNoches = cantNoches;
 };
 

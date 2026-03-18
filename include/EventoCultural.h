@@ -2,6 +2,8 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include "Experiencia.h"
+
 #ifndef EVENTOCULTURAL_H
 #define EVENTOCULTURAL_H
 

@@ -1,5 +1,5 @@
-#include "EventoCultural.h"
-#include "Experiencia.h"
+#include <EventoCultural.h>
+#include <Experiencia.h>
 
 EventoCultural::EventoCultural() {
     ubicacion = "";
@@ -28,8 +28,8 @@ void EventoCultural::setUsoCupon(bool usoCupon) {
 }
 
 float EventoCultural::calcularCosto() {
-    float precioBase = getPrecioBase();
-    set<string> conjuntoTuristas = getTuristas();
+    float precioBase = this->getPrecioBase();
+    std::list<Turista*> conjuntoTuristas = this->getTuristas();
     int cantidadTuristas = conjuntoTuristas.size();
 
     float resultado = 0;
