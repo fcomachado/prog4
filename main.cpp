@@ -8,7 +8,8 @@
 #include "include/Alojamiento.h"
 #include "include/TourGuiado.h"
 #include "include/EventoCultural.h"
-
+#include "include/DTFecha.h"
+#include "include/DTExpe.h"
 
 //#include <../include/Turista.h>
 
@@ -55,12 +56,14 @@ void parte_a(){
 	alojamiento1->setDescripcion("Hotel moderno");
 	alojamiento1->setPrecioBase(30);
 	alojamiento1->setFecha(18,05,2020);
+	coleccion_guardarExperiencia(alojamiento1);
 
 	Alojamiento* alojamiento2 = new Alojamiento("Hotel SeaView", MediaPension, 15);
 	alojamiento2->setCodigoReserva("ALJ4789");
 	alojamiento2->setDescripcion("Todas las habitacions con vista al mar");
 	alojamiento2->setPrecioBase(100);
 	alojamiento2->setFecha(10,02,2025);
+	coleccion_guardarExperiencia(alojamiento2);
 }
 
 void parte_b(){
@@ -102,8 +105,8 @@ void parte_d(){
 }
 
 void parte_e(){
-	Turista::Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
-	Turista::Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
+	Turista* turista1 = new Turista("4.951.278-9", "Vanesa Castro", "vcastro.uy@servidor.net");
+	Turista* turista2 = new Turista("1.535.442-0", "Karen Santos", "karen.s89@internet.uy");
 }
 
 void parte_f(){
@@ -116,7 +119,7 @@ void linkTuristaExperiencia(std::string _turista, std::string _exp) {
 	Experiencia* exp = coleccion_getExperiencia(_exp);
 	Turista* turista = coleccion_getTurista(_turista);
 	turista->agregarExperiencia(exp);
-	exp->setTurista(turista);
+	exp->setTuristas(turista);
 }
 void parte_g(){
 	linkTuristaExperiencia("4.951.278-9", "ALX5489");
@@ -129,9 +132,10 @@ void parte_g(){
 
 void parte_h(){
 	Turista* turista = coleccion_getTurista("4.951.278-9");
-	set<string> listaExperiencias = (*turista).listarExperiencias(10/12/2023, 0, 1000);
+	DTFecha fechaParteH = DTFecha(10, 12, 2023);
+	set<string> listaExperiencias = (*turista).listarExperiencias(fechaParteH, 0, 1000);
 	//imprimo recorriendo el set
-	for(set<string>::iteretor it = listaExperiencias.begin(), it != listaExperiencias.end(), it++){
+	for(set<string>::iterator it = listaExperiencias.begin(); it != listaExperiencias.end(); it++){
 		cout << *it << endl;
 	}
 }
@@ -143,9 +147,10 @@ void parte_i(){
 
 void parte_j(){
 	Turista* turista = coleccion_getTurista("1.535.442-0");
-	set<string> listaExperiencias = (*turista).listarExperiencias(10/10/2020, 0, 1000);
+	DTFecha fechaParteJ =  DTFecha(10, 10, 2020);
+	set<string> listaExperiencias = (*turista).listarExperiencias(fechaParteJ, 0, 1000);
 	//imprimo recorriendo el set
-	for(set<string>::iteretor it = listaExperiencias.begin(), it != listaExperiencias.end(), it++){
+	for(set<string>::iterator it = listaExperiencias.begin(); it != listaExperiencias.end(); it++){
 		cout << *it << endl;
 	}
 }

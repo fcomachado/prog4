@@ -14,13 +14,13 @@ class DTExpe {
         std::string codigoReserva;
         std::string descripcion;
         DTFecha fecha;
-        std::list<std::string> turistas; //lista de nombres de los turistas
-        //std::list<Turista*> turistas; //idea original
+        //std::list<std::string> turistas; //lista de nombres de los turistas
+        std::list<Turista*> turistas; //idea original
     
     public:
 
         DTExpe();
-        DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, std::list<std::string> turistas);
+        DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, std::list<Turista*> turistas);
 
         std::string getCodigoReserva();
         std::string getDescripcion();
