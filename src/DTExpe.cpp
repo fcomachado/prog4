@@ -10,6 +10,14 @@ DTExpe::DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha
     this->turistas = turistas;
 }
 
+DTExpe::DTExpe(DTExpe & expe) {
+    this->codigoReserva = expe.getCodigoReserva();
+    this->descripcion = expe.getDescripcion();
+    this->fecha = expe.getFecha();
+    this->turistas = expe.getTuristas();
+}
+
+
 std::string DTExpe::getCodigoReserva() {
     return this->codigoReserva;
 }

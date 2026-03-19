@@ -3,6 +3,7 @@
 #include <sstream>
 #include <Experiencia.h>
 #include <DTFecha.h>
+#include <DTExpe.h>
 
 Experiencia::Experiencia() {}
 
@@ -56,15 +57,16 @@ DTExpe Experiencia::getDT() {
     std::string codigoReserva = this->getCodigoReserva();
     std::string descripcion = this->getDescripcion();
     DTFecha fecha(this->getFecha().getDia(), this->getFecha().getMes(), this->getFecha().getAnio());
-    //DTFecha fecha = this->getFecha();
-    std::list<Turista*> turistas = this->getTuristas(); // esta bien?
-    DTExpe* res = new DTExpe(codigoReserva, descripcion, fecha, turistas); 
+    std::list<Turista*> turistas; 
 
-    //DTExpe res (codigoReserva, descripcion, fecha, turistas);
-    //DTExpe* res = new DTExpe(this->getCodigoReserva(), this->getDescripcion(), this->getFecha(), this->getTuristas());
-    
-    return (*res); 
+    //std::list<Turista*> turistas = this->getTuristas(); // esta bien?
+    DTExpe res(codigoReserva, descripcion, fecha, turistas);     
+    return res; 
 }
+
+/*DTExpe Experiencia::getDT() { 
+    return DTExpe(this->getCodigoReserva(), this->getDescripcion(), this->getFecha(), this->getTuristas()); 
+}*/
 
 
 std::list<Turista*> Experiencia::getTuristas() {

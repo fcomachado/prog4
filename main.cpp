@@ -100,13 +100,26 @@ void parte_c(){
 }
 
 void parte_d(){
-	/*cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
+	cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
 	cout << coleccion_getExperiencia("ALJ4789")->getDT() << endl;
 	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
 	cout << coleccion_getExperiencia("TGR3257")->getDT() << endl;
-	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;*/
-	cout << "hola" << endl;
+	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;
+	
+	/*cout << "Prueba primer experiencia guardada (Alojamiento)" << endl;
+	cout << coleccion_getExperiencia("ALX5489")->getCodigoReserva() << endl;
 	cout << coleccion_getExperiencia("ALX5489")->getDescripcion() << endl;
+	cout << coleccion_getExperiencia("ALX5489")->getPrecioBase() << endl;
+
+	cout << "Prueba tercer experiencia guardada (Tour Guiado)" << endl;
+	cout << coleccion_getExperiencia("TGO4657")->getCodigoReserva() << endl;
+	cout << coleccion_getExperiencia("TGO4657")->getDescripcion() << endl;
+	cout << coleccion_getExperiencia("TGO4657")->getPrecioBase() << endl;
+
+	cout << "Prueba quinta experiencia guardada (Evento Cultural)" << endl;
+	cout << coleccion_getExperiencia("ECP1346")->getCodigoReserva() << endl;
+	cout << coleccion_getExperiencia("ECP1346")->getDescripcion() << endl;
+	cout << coleccion_getExperiencia("ECP1346")->getPrecioBase() << endl;*/
 }
 
 void parte_e(){
