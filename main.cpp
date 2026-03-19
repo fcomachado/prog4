@@ -127,7 +127,9 @@ void linkTuristaExperiencia(std::string _turista, std::string _exp) {
 	Experiencia* exp = coleccion_getExperiencia(_exp);
 	Turista* turista = coleccion_getTurista(_turista);
 	turista->agregarExperiencia(exp);
-	exp->setTuristas(turista);
+	std::list<Turista*> listTuristas;
+	listTuristas.push_back(turista);
+	exp->setTuristas(listTuristas);
 } 
 void parte_g(){
 	linkTuristaExperiencia("4.951.278-9", "ALX5489");
