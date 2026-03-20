@@ -40,7 +40,7 @@ std::ostream &operator<<(std::ostream& o, const std::list<Turista*>& turistas) {
     for(std::list<Turista*>::const_iterator it = turistas.begin(); it != turistas.end(); ++it){
         o << (*it)->getNombre();
 
-        std::list<Turista*>::const_iterador next = it;
+        std::list<Turista*>::const_iterator next = it;
         ++next;
         if (next != turistas.end()) {
             o << ",";
