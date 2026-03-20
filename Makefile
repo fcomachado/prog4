@@ -1,6 +1,6 @@
 IDIR = include
 CC = g++
-CFLAGS = -std=c++98 -Wall -Wextra -I$(IDIR)
+CFLAGS = -std=c++98 -Wall -Wextra -I$(IDIR) -g
 
 CPPDIR = src
 ODIR = obj

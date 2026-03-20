@@ -40,3 +40,4 @@ float TourGuiado::calcularCosto(){
 }
 
 //~TourGuiado();
+//no tengo que liberar nada pq no pido memoria, string y set<string> se destruyen solos

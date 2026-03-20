@@ -22,7 +22,7 @@ class TourGuiado: public Experiencia {
         void setLugaresVisitados(set<string>);
 
         virtual float calcularCosto();
-        ~TourGuiado();
+        ~TourGuiado(){};
 };
 
 #endif 
