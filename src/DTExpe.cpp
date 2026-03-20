@@ -36,8 +36,8 @@ std::list<Turista*> DTExpe::getTuristas() const {
 }
 
 //auxiliar para imprimir la lista de turistas en la ultima funcion
-std::ostream &operator<<(std::ostream& o, const std::list<Turista*>& turistas) 0{
-    for(std::list<Turista*>::const_iterator it = turistas.begin(); it != turistas.end(); it++){
+std::ostream &operator<<(std::ostream& o, const std::list<Turista*>& turistas) {
+    for(std::list<Turista*>::const_iterator it = turistas.begin(); it != turistas.end(); ++it){
         o << (*it)->getNombre();
 
         std::list<Turista*>::const_iterador next = it;
@@ -62,8 +62,8 @@ std::ostream &operator<<(std::ostream& o, const DTExpe& dtexpe) {
 
     std::stringstream ss;
     ss << dtexpe.getFecha().getDia() << "/" << dtexpe.getFecha().getMes() << "/" << dtexpe.getFecha().getAnio();
-    std::strign fecha = ss.str();
-    
+    std::string fecha = ss.str();
+
     o << codigoReserva << "->" << descripcion << "(" << fecha << ")/" << turistas ; //falta turistas
 
     return o;
