@@ -1,9 +1,10 @@
 #include <iostream>
-//#include <ostream>
+#include <ostream>
 #include <sstream>
 #include <string>
 #include <list>
 #include "DTFecha.h"
+#include "Turista.h"
 #ifndef DTEXPE_H
 #define DTEXPE_H
 
@@ -20,14 +21,14 @@ class DTExpe {
     public:
         DTExpe();
         DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha, std::list<Turista*> turistas);
-        DTExpe(DTExpe &);
+        DTExpe(const DTExpe &);
 
-        std::string getCodigoReserva();
-        std::string getDescripcion();
-        DTFecha getFecha();
-        std::list<Turista*> getTuristas();
+        std::string getCodigoReserva() const;
+        std::string getDescripcion() const;
+        DTFecha getFecha() const;
+        std::list<Turista*> getTuristas() const;
 
-        friend std::ostream &operator<<(std::ostream &,DTExpe);
+        friend std::ostream &operator<<(std::ostream &, const DTExpe &);
 };
 
 #endif

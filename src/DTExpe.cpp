@@ -10,7 +10,7 @@ DTExpe::DTExpe(std::string codigoReserva, std::string descripcion, DTFecha fecha
     this->turistas = turistas;
 }
 
-DTExpe::DTExpe(DTExpe & expe) {
+DTExpe::DTExpe(const DTExpe & expe) {
     std::string codReserva = expe.getCodigoReserva();
     std::string descr = expe.getDescripcion();
     DTFecha fech = expe.getFecha();
@@ -20,25 +20,31 @@ DTExpe::DTExpe(DTExpe & expe) {
 }
 
 
-std::string DTExpe::getCodigoReserva() {
+std::string DTExpe::getCodigoReserva() const{
     return this->codigoReserva;
 }
-std::string DTExpe::getDescripcion() {
+std::string DTExpe::getDescripcion() const{
     return this->descripcion;
 }
 
-DTFecha DTExpe::getFecha() {
+DTFecha DTExpe::getFecha() const {
     return this->fecha;
 }
 
-std::list<Turista*> DTExpe::getTuristas() {
+std::list<Turista*> DTExpe::getTuristas() const {
     return this->turistas;
 }
 
 //auxiliar para imprimir la lista de turistas en la ultima funcion
-ostream &operator<<(ostream& o, const list<Turista*> turistas){
-    for(list<Turista*>::iterator it = turistas.begin(); it != turistas.end(); it++){
-        o << *it << ',';
+std::ostream &operator<<(std::ostream& o, const std::list<Turista*>& turistas) 0{
+    for(std::list<Turista*>::const_iterator it = turistas.begin(); it != turistas.end(); it++){
+        o << (*it)->getNombre();
+
+        std::list<Turista*>::const_iterador next = it;
+        ++next;
+        if (next != turistas.end()) {
+            o << ",";
+        }
     }
     return o;
 }
@@ -52,9 +58,13 @@ std::ostream &operator<<(std::ostream& o, const DTExpe& dtexpe) {
 
     //std::string fecha = std::to_string(fechaSinFormato.getDia()) + '/' + std::to_string(fechaSinFormato.getMes()) + '/' + std::to_string(fechaSinFormato.getAnio());
     
-    std::string fecha = std::to_string( dtexpe.getFecha().getDia()) + '/' + std::to_string( dtexpe.getFecha().getMes()) + '/' + std::to_string( dtexpe.getFecha().getAnio());
+    //std::string fecha = std::to_string( dtexpe.getFecha().getDia()) + "/" + std::to_string( dtexpe.getFecha().getMes()) + "/" + std::to_string( dtexpe.getFecha().getAnio());
 
-    o << codigoReserva << '->' << descripcion << '(' << fecha << ')/' << turistas ; //falta turistas
+    std::stringstream ss;
+    ss << dtexpe.getFecha().getDia() << "/" << dtexpe.getFecha().getMes() << "/" << dtexpe.getFecha().getAnio();
+    std::strign fecha = ss.str();
+    
+    o << codigoReserva << "->" << descripcion << "(" << fecha << ")/" << turistas ; //falta turistas
 
     return o;
 } //arreglar

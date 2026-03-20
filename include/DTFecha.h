@@ -15,11 +15,11 @@ class DTFecha {
 
         DTFecha(); //constructor vacio
         DTFecha(int, int, int); //constructor por parametros
-        DTFecha(DTFecha &); //constructor por copia
+        DTFecha(const DTFecha &); //constructor por copia
 
-        int getDia();
-        int getMes();
-        int getAnio();
+        int getDia() const;
+        int getMes() const;
+        int getAnio() const;
         bool compararFechas(class DTFecha, class DTFecha); //devuelve true si fecha1 es posterior a fecha2
 };
 

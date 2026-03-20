@@ -15,21 +15,21 @@ DTFecha::DTFecha(int dia, int mes, int anio) {
     this->anio = anio;
 }
 
-DTFecha::DTFecha(DTFecha &fecha) {
+DTFecha::DTFecha(const DTFecha &fecha) {
     this->dia = fecha.getDia();
     this->mes = fecha.getMes();
     this->anio = fecha.getAnio();
 }
 
-int DTFecha::getDia() {
+int DTFecha::getDia() const {
     return this->dia;
 }
 
-int DTFecha::getMes() {
+int DTFecha::getMes() const {
     return this->mes;
 }
 
-int DTFecha::getAnio() {
+int DTFecha::getAnio() const {
     return this->anio;
 }
 //devuelve true si fecha1 es posterior a fecha2
