@@ -195,11 +195,15 @@ void cleanUp(){
 	for (list<Experiencia*>::iterator it = experiencias.begin(); it != experiencias.end(); it++){
 		delete *it;
 	}
+	experiencias.clear();
+	map_experiencias.clear();
 
 	//libero memoria de la lista de turistas
 	for (list<Turista*>::iterator it = turistas.begin(); it != turistas.end(); it++){
 		delete *it;
 	}
+	turistas.clear();
+	map_turistas.clear();
 }
 
 int main() {
