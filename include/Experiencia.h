@@ -30,6 +30,9 @@ class Experiencia {
         void setFecha(int, int, int);
         void setTuristas(std::list<Turista*>);
 
+        void agregarTurista(Turista*);
+        void borrarTurista(Turista*);
+
         std::string getCodigoReserva();
         std::string getDescripcion();
         int getPrecioBase();

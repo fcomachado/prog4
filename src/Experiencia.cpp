@@ -35,6 +35,8 @@ void Experiencia::setFecha(int dia, int mes, int anio) {
 void Experiencia::setTuristas(std::list<Turista*> turista) {
     this->turistas = turista;
 }
+void Experiencia::agregarTurista(Turista* tur){ turistas.push_back(tur); }//agrega el turista
+void Experiencia::borrarTurista(Turista* tur){ turistas.remove(tur); }//borra el turista
 
 std::string Experiencia::getCodigoReserva() {
     return this->codigoReserva;
