@@ -148,6 +148,7 @@ void linkTuristaExperiencia(std::string _turista, std::string _exp) {
 
 void parte_g(){
 	linkTuristaExperiencia("4.951.278-9", "ALX5489");
+	//linkTuristaExperiencia("1.535.442-0", "ALX5489"); //probe esto para ver si una experiencia logra tener dos turistas
 	linkTuristaExperiencia("4.951.278-9", "ALJ4789");
 	linkTuristaExperiencia("4.951.278-9", "TGR3257");
 	linkTuristaExperiencia("4.951.278-9", "ECP1346");
@@ -158,13 +159,13 @@ void parte_g(){
 }
 
 void parte_h(){
-	/*Turista* turista1 = coleccion_getTurista("4.951.278-9");
+	Turista* turista1 = coleccion_getTurista("4.951.278-9");
 	DTFecha fechaParteH = DTFecha(10, 12, 2023);
 	set<string> listaExperiencias = (*turista1).listarExperiencias(fechaParteH, 0, 1000);
 	//imprimo recorriendo el set
 	for(set<string>::iterator it = listaExperiencias.begin(); it != listaExperiencias.end(); it++){
 		cout << *it << endl;
-	}*/
+	}
 }
 
 void parte_i(){
@@ -173,20 +174,20 @@ void parte_i(){
 }
 
 void parte_j(){
-	/*Turista* turista2 = coleccion_getTurista("1.535.442-0");
+	Turista* turista2 = coleccion_getTurista("1.535.442-0");
 	DTFecha fechaParteJ =  DTFecha(10, 10, 2020);
 	set<string> listaExperiencias = (*turista2).listarExperiencias(fechaParteJ, 0, 1000);
 	//imprimo recorriendo el set
 	for(set<string>::iterator it = listaExperiencias.begin(); it != listaExperiencias.end(); it++){
 		cout << *it << endl;
-	}*/
+	}
 }
 
 void parte_k(){
-	/*cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
+	cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
 	cout << coleccion_getExperiencia("ALJ4789")->getDT() << endl;
 	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
-	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;*/
+	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;
 }
 
 void cleanUp(){

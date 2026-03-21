@@ -68,7 +68,7 @@ std::ostream &operator<<(std::ostream& o, const DTExpe& dtexpe) {
     std::list<Turista*>::iterator it;
     for (it = turistas.begin(); it != turistas.end(); it++) {
         if (it != turistas.begin()) {
-            tt << ",";
+            tt << ", ";
         }
         tt << (*it)->getNombre();
     }
