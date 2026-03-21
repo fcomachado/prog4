@@ -15,8 +15,8 @@ Turista::Turista(std::string _ci, std::string _nombre, std::string _email) {
 void Turista::setCi(std::string ci) { this->ci = ci; }
 void Turista::setNombre(std::string nombre) { this->nombre = nombre; }
 void Turista::setEmail(std::string email) { this->email = email; }
-void Turista::agregarExperiencia(Experiencia* exp){ experiencias.push_back(exp); }//agrega la exp
-void Turista::borrarExperiencia(Experiencia* exp){ experiencias.remove(exp); }//borra la exp
+void Turista::agregarExperiencia(Experiencia* exp){ this->experiencias.push_back(exp); }//agrega la exp
+void Turista::borrarExperiencia(Experiencia* exp){ this->experiencias.remove(exp); }//borra la exp
 
 std::string Turista::getCi() { return this->ci; }
 std::string Turista::getNombre() { return this->nombre; }

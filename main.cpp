@@ -100,6 +100,7 @@ void parte_c(){
 }
 
 void parte_d(){
+	cout << "Exp " << " tiene " << coleccion_getExperiencia("ALX5489")->getDT().getTuristas().size() << " turistas." << endl;
 	cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
 	cout << coleccion_getExperiencia("ALJ4789")->getDT() << endl;
 	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
