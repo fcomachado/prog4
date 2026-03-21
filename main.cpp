@@ -101,6 +101,8 @@ void parte_c(){
 
 void parte_d(){
 	cout << "Exp " << " tiene " << coleccion_getExperiencia("ALX5489")->getDT().getTuristas().size() << " turistas." << endl;
+	//cout << (*coleccion_getExperiencia("ALX5489")->getDT().getTuristas().begin())->getNombre() << endl; (no esta linkeando turistas)
+
 	cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
 	cout << coleccion_getExperiencia("ALJ4789")->getDT() << endl;
 	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
@@ -132,8 +134,8 @@ void parte_e(){
 }
 
 void parte_f(){
-	/*cout << coleccion_getTurista("4.951.278-9")->toString() << endl;
-	cout << coleccion_getTurista("1.535.442-0")->toString() << endl;*/
+	cout << coleccion_getTurista("4.951.278-9")->toString() << endl;
+	cout << coleccion_getTurista("1.535.442-0")->toString() << endl;
 }
 
 //función auxiliar para parte-G
@@ -143,6 +145,7 @@ void linkTuristaExperiencia(std::string _turista, std::string _exp) {
 	turista->agregarExperiencia(exp);
 	exp->agregarTurista(turista);
 } 
+
 void parte_g(){
 	linkTuristaExperiencia("4.951.278-9", "ALX5489");
 	linkTuristaExperiencia("4.951.278-9", "ALJ4789");
