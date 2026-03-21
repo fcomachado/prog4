@@ -42,7 +42,7 @@ class Experiencia {
         std::list<Turista*> getTuristas();
         virtual float calcularCosto() = 0;
        
-        ~Experiencia();
+        virtual ~Experiencia();
 };
 
 #endif

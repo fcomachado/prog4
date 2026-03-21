@@ -18,10 +18,10 @@ using namespace std;
 
 void linkTuristaExperiencia(std::string, std::string); //función auxiliar punto-G
 
-std::list<Experiencia*> experiencias;
+std::list<Experiencia*> experiencias;	//lista de experiencias
 std::map<std::string, Experiencia*> map_experiencias;
 
-std::list<Turista*> turistas;
+std::list<Turista*> turistas;	//lista de turistas
 std::map<std::string, Turista*> map_turistas;
 
 void coleccion_guardarExperiencia(Experiencia* exp){
@@ -191,6 +191,15 @@ void parte_k(){
 }
 
 void cleanUp(){
+	//libero memoria de la lista de experiencias
+	for (list<Experiencia*>::iterator it = experiencias.begin(); it != experiencias.end(); it++){
+		delete *it;
+	}
+
+	//libero memoria de la lista de turistas
+	for (list<Turista*>::iterator it = turistas.begin(); it != turistas.end(); it++){
+		delete *it;
+	}
 }
 
 int main() {
