@@ -191,6 +191,18 @@ void parte_k(){
 }
 
 void cleanUp(){
+	for (std::list<Experiencia*>::iterator exp = experiencias.begin(); exp != experiencias.end(); exp++) {
+		delete (*exp);
+	}
+	experiencias.clear();
+	map_experiencias.clear();
+
+	for (std::list<Turista*>::iterator tur = turistas.begin(); tur != turistas.end(); tur++) {
+		delete (*tur);
+	}
+	turistas.clear();
+	map_turistas.clear();
+
 }
 
 int main() {

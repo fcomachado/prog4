@@ -80,5 +80,5 @@ std::list<Turista*> Experiencia::getTuristas() {
 }*/ //no tiene implementacion aca
        
 Experiencia::~Experiencia() {
-
+    this->turistas.clear();
 }

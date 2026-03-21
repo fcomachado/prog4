@@ -54,5 +54,5 @@ set<string> Turista::listarExperiencias(DTFecha desde, float min, float max){
 }
 
 Turista::~Turista() {
-
+    this->experiencias.clear();
 }
