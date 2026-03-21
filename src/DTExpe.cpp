@@ -64,7 +64,18 @@ std::ostream &operator<<(std::ostream& o, const DTExpe& dtexpe) {
     ss << dtexpe.getFecha().getDia() << "/" << dtexpe.getFecha().getMes() << "/" << dtexpe.getFecha().getAnio();
     std::string fecha = ss.str();
 
-    o << codigoReserva << "->" << descripcion << "(" << fecha << ")/" << turistas ; //falta turistas
+    std::stringstream tt;
+    std::list<Turista*>::iterator it;
+    for (it = turistas.begin(); it != turistas.end(); it++) {
+        if (it != turistas.begin()) {
+            tt << ",";
+        }
+        tt << (*it)->getNombre();
+    }
+
+    std::string turistasFinal = tt.str();
+
+    o << codigoReserva << "->" << descripcion << "(" << fecha << ")/" << turistasFinal ; //falta turistas
 
     return o;
 } //arreglar
