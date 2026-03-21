@@ -4,7 +4,7 @@
 #include <Experiencia.h>
 #include <Alojamiento.h>
 
-Alojamiento::Alojamiento() {}
+Alojamiento::Alojamiento() {};
 
 Alojamiento::Alojamiento(std::string hotel, TipoRegimen regimen, int cantNoches){
   this->hotel = hotel;
@@ -42,6 +42,6 @@ void Alojamiento::setCantNoches(int cantNoches){
   this->cantNoches = cantNoches;
 };
 
-Alojamiento::~Alojamiento(){}      
+Alojamiento::~Alojamiento(){}; 
 
 
