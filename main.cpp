@@ -171,6 +171,12 @@ void parte_h(){
 void parte_i(){
 	Experiencia* aBorrar = coleccion_getExperiencia("TGR3257");
 	coleccion_eliminarExperiencia(aBorrar);
+
+	list<Turista*> turistas = aBorrar->getTuristas();
+	for (list<Turista*>::iterator it=turistas.begin(); it != turistas.end(); ++it) {
+		(*it)->borrarExperiencia(aBorrar);
+	}
+	delete aBorrar;
 }
 
 void parte_j(){
