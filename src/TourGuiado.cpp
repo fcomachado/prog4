@@ -35,9 +35,8 @@ float TourGuiado::calcularCosto(){
     int cantidadTuristas = conjuntoTuristas.size();
     int cantLugaresVisitados = lugaresVisitados.size();
     
-    float resultado = (precBase + 2) * cantLugaresVisitados * cantidadTuristas;
+    float resultado = precBase + (2 * cantLugaresVisitados * cantidadTuristas);
     return resultado;
 }
 
 //TourGuiado::~TourGuiado() {}; YA ESTA DEFINIDO EN EL .H
-//no tengo que liberar nada pq no pido memoria, string y set<string> se destruyen solos

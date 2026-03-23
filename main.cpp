@@ -11,7 +11,6 @@
 #include "include/DTFecha.h"
 #include "include/DTExpe.h"
 
-//#include <../include/Turista.h>
 
 using namespace std;
 
@@ -100,29 +99,11 @@ void parte_c(){
 }
 
 void parte_d(){
-	//cout << "Exp " << " tiene " << coleccion_getExperiencia("ALX5489")->getDT().getTuristas().size() << " turistas." << endl;
-	//cout << (*coleccion_getExperiencia("ALX5489")->getDT().getTuristas().begin())->getNombre() << endl; (no esta linkeando turistas)
-
 	cout << coleccion_getExperiencia("ALX5489")->getDT() << endl;
 	cout << coleccion_getExperiencia("ALJ4789")->getDT() << endl;
 	cout << coleccion_getExperiencia("TGO4657")->getDT() << endl;
 	cout << coleccion_getExperiencia("TGR3257")->getDT() << endl;
 	cout << coleccion_getExperiencia("ECP1346")->getDT() << endl;
-	
-	/*cout << "Prueba primer experiencia guardada (Alojamiento)" << endl;
-	cout << coleccion_getExperiencia("ALX5489")->getCodigoReserva() << endl;
-	cout << coleccion_getExperiencia("ALX5489")->getDescripcion() << endl;
-	cout << coleccion_getExperiencia("ALX5489")->getPrecioBase() << endl;
-
-	cout << "Prueba tercer experiencia guardada (Tour Guiado)" << endl;
-	cout << coleccion_getExperiencia("TGO4657")->getCodigoReserva() << endl;
-	cout << coleccion_getExperiencia("TGO4657")->getDescripcion() << endl;
-	cout << coleccion_getExperiencia("TGO4657")->getPrecioBase() << endl;
-
-	cout << "Prueba quinta experiencia guardada (Evento Cultural)" << endl;
-	cout << coleccion_getExperiencia("ECP1346")->getCodigoReserva() << endl;
-	cout << coleccion_getExperiencia("ECP1346")->getDescripcion() << endl;
-	cout << coleccion_getExperiencia("ECP1346")->getPrecioBase() << endl;*/
 }
 
 void parte_e(){
@@ -148,14 +129,11 @@ void linkTuristaExperiencia(std::string _turista, std::string _exp) {
 
 void parte_g(){
 	linkTuristaExperiencia("4.951.278-9", "ALX5489");
-	//linkTuristaExperiencia("1.535.442-0", "ALX5489"); //probe esto para ver si una experiencia logra tener dos turistas
 	linkTuristaExperiencia("4.951.278-9", "ALJ4789");
 	linkTuristaExperiencia("4.951.278-9", "TGR3257");
 	linkTuristaExperiencia("4.951.278-9", "ECP1346");
 	linkTuristaExperiencia("1.535.442-0", "TGO4657");
 	linkTuristaExperiencia("1.535.442-0", "TGR3257");
-	cout << "Exp TGR3257" << " tiene " << coleccion_getExperiencia("TGR3257")->getDT().getTuristas().size() << " turistas." << endl;
-	cout << "Tur 4.951.278-9" << " tiene " << coleccion_getTurista("4.951.278-9")->getExperiencias().size() << " experiencias." << endl;
 }
 
 void parte_h(){

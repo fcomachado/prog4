@@ -61,15 +61,9 @@ DTExpe Experiencia::getDT() {
     DTFecha fecha(this->getFecha().getDia(), this->getFecha().getMes(), this->getFecha().getAnio());
     std::list<Turista*> turistas = this->getTuristas(); 
 
-    //std::list<Turista*> turistas = this->getTuristas(); // esta bien?
     DTExpe res(codigoReserva, descripcion, fecha, turistas);     
     return res; 
 }
-
-/*DTExpe Experiencia::getDT() { 
-    return DTExpe(this->getCodigoReserva(), this->getDescripcion(), this->getFecha(), this->getTuristas()); 
-}*/
-
 
 std::list<Turista*> Experiencia::getTuristas() {
     return this->turistas;
