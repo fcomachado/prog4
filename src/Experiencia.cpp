@@ -27,10 +27,9 @@ void Experiencia::setPrecioBase(int precioBase) {
 }
 
 void Experiencia::setFecha(int dia, int mes, int anio) {
-    //DTFecha fecha = DTFecha(dia, mes, anio);
     DTFecha fecha(dia, mes, anio);
     this->fecha = fecha;
-} //aca estamos usando memoria, hay que liberarla
+} 
 
 void Experiencia::setTuristas(std::list<Turista*> turista) {
     this->turistas = turista;
